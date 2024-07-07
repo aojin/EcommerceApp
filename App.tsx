@@ -1,14 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import 'tailwindcss/tailwind.css'; // Add this import
+import React from 'react';
+import { Platform, View, StyleSheet } from 'react-native';
+import HomeScreenNative from './src/screens/HomeScreen.native';
+import HomeScreenWeb from './src/screens/HomeScreen.web';
 
-export default function App() {
+const App = () => {
+  const HomeScreen = Platform.OS === 'web' ? HomeScreenWeb : HomeScreenNative;
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <HomeScreen />
+      {/* <StatusBar style="auto" /> */}
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -18,3 +23,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default App;
