@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "expo/AppEntry.js",
   "scripts": {
-    "start": "node start.js",
+    "start": "node start.mjs",
     "android": "npx @expo/cli start --android",
     "ios": "npx @expo/cli start --ios",
-    "web": "node start.js",
+    "web": "node start.mjs",
     "prepare": "husky install",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
