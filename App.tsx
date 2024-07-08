@@ -1,27 +1,28 @@
-import 'tailwindcss/tailwind.css'; // Add this import
-import React from 'react';
-import { Platform, View, StyleSheet } from 'react-native';
-import HomeScreenNative from './src/screens/HomeScreen.native';
-import HomeScreenWeb from './src/screens/HomeScreen.web';
+import React, { Suspense } from 'react';
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, View, Platform, Text } from 'react-native';
 
-const App = () => {
-  const HomeScreen = Platform.OS === 'web' ? HomeScreenWeb : HomeScreenNative;
+const AppNavigator = React.lazy(() =>
+  Platform.select({
+    web: () => import('./src/navigation/AppNavigator.web'),
+    default: () => import('./src/navigation/AppNavigator.native'),
+  })(),
+);
 
+export default function App() {
   return (
     <View style={styles.container}>
-      <HomeScreen />
-      {/* <StatusBar style="auto" /> */}
+      <Suspense fallback={<Text>Loading...</Text>}>
+        <AppNavigator />
+      </Suspense>
+      <StatusBar style="auto" />
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
-
-export default App;
