@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, ScrollView } from 'react-native';
 import Header from '../../components/Header/Header';
-import Carousel from '../../components/Carousel/Carousel';
+import CarouselComponent from '../../components/Carousel/Carousel';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import Footer from '../../components/Footer/Footer';
 
@@ -10,7 +10,7 @@ const HomeScreen = () => {
     <View className="flex-1">
       <Header />
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-        <Carousel />
+        <CarouselComponent />
         <View className="p-4">
           <Text className="text-2xl font-bold mb-4">Featured Products</Text>
           <View className="flex flex-wrap -mx-2">
