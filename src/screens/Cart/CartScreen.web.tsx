@@ -10,7 +10,7 @@ const CartScreen = () => {
         <h2 className="text-2xl font-bold mb-4">Cart</h2>
         <p className="text-base mb-4">Your cart is empty.</p>
         <button className="bg-blue-500 text-white py-2 px-4 rounded-lg">
-          Checkout
+          Checkout Web
         </button>
       </main>
       <Footer />

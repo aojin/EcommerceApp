@@ -1,15 +1,8 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, Platform } from 'react-native';
-// Import Tailwind CSS
+import { StyleSheet, View } from 'react-native';
+import AppNavigator from './src/navigation/AppNavigator';
 import 'tailwindcss/tailwind.css';
-
-/* eslint-disable @typescript-eslint/no-var-requires */
-const AppNavigator = Platform.select({
-  web: () => require('./src/navigation/AppNavigator.web').default,
-  default: () => require('./src/navigation/AppNavigator.native').default,
-})();
-/* eslint-enable @typescript-eslint/no-var-requires */
 
 const App: React.FC = () => {
   return (
@@ -24,6 +17,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    width: '100%',
+    height: '100vh',
+    overflow: 'auto',
   },
 });
 
