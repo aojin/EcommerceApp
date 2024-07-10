@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, ScrollView, Pressable } from 'react-native';
-import ProductCard from '../../components/ProductCard/ProductCard';
-import Footer from '../../components/Footer/Footer';
+import ProductCard from '../../components/ProductCard/ProductCard.native';
+import Footer from '../../components/Footer/Footer.native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faFilter } from '@fortawesome/free-solid-svg-icons';
@@ -81,8 +81,7 @@ const ProductListScreen = () => {
   return (
     <Drawer.Navigator
       drawerContent={(props) => <ProductFilterSidebar {...props} />}
-      screenOptions={{ headerShown: false }}
-      drawerPosition="right"
+      screenOptions={{ headerShown: false, drawerPosition: 'right' }}
       defaultStatus="closed"
     >
       <Drawer.Screen name="ProductListScreen" component={ProductList} />

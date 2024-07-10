@@ -1,14 +1,13 @@
-// src/navigation/AppNavigator.tsx
 import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import { Platform, Pressable } from 'react-native';
-import PropTypes from 'prop-types';
 import Header from '../components/Header/Header.web';
 import { HomeScreen, ProductListScreen, CartScreen } from './screens';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import PropTypes from 'prop-types';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -34,6 +33,7 @@ const DrawerNavigator = () => {
       initialRouteName="Home"
       screenOptions={({ navigation }) => ({
         headerRight: () => <CustomHeaderRight navigation={navigation} />,
+        drawerPosition: 'right',
       })}
     >
       <Drawer.Screen name="Home" component={HomeScreen} />
