@@ -9,6 +9,7 @@ module.exports = async function (env, argv) {
   console.log('Webpack Environment:', env);
 
   const config = await createExpoWebpackConfigAsync(env, argv);
+  config.resolve.alias['react-native$'] = 'react-native-web';
 
   config.plugins.push(
     new webpack.DefinePlugin({

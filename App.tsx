@@ -1,15 +1,17 @@
 import React from 'react';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import AppNavigator from './src/navigation/AppNavigator';
 import 'tailwindcss/tailwind.css';
+import './src/utils/fontAwesomeSetup';
 
 const App: React.FC = () => {
   return (
-    <View style={styles.container}>
+    <GestureHandlerRootView style={styles.container}>
       <AppNavigator />
       <StatusBar style="auto" />
-    </View>
+    </GestureHandlerRootView>
   );
 };
 
