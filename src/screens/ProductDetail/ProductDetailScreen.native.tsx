@@ -10,7 +10,7 @@ const ProductDetailScreen = () => {
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         <View className="p-4">
           <Image
-            source={{ uri: 'https://via.placeholder.com/150' }}
+            source={{ uri: 'https://picsum.photos/150' }}
             className="w-full h-64 object-cover mb-4"
           />
           <Text className="text-2xl font-bold">Product Title</Text>

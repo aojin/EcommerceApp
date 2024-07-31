@@ -4,7 +4,7 @@ const ProductCard = () => {
   return (
     <div className="border p-4 rounded-lg shadow-lg">
       <img
-        src="https://via.placeholder.com/150"
+        src="https://picsum.photos/150"
         alt="Product"
         className="w-full h-48 object-cover rounded-t-lg"
       />

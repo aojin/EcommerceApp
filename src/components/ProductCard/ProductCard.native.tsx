@@ -5,7 +5,7 @@ const ProductCard = () => {
   return (
     <View className="border p-4 rounded-lg shadow-lg">
       <Image
-        source={{ uri: 'https://via.placeholder.com/150' }}
+        source={{ uri: 'https://picsum.photos/150' }}
         className="w-full h-48 object-cover rounded-t-lg"
       />
       <Text className="text-lg font-bold mt-2">Product Title</Text>

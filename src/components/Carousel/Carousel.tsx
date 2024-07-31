@@ -7,9 +7,9 @@ import 'nativewind';
 const { height: screenHeight } = Dimensions.get('window');
 
 const data = [
-  { title: 'Image 1', url: 'https://via.placeholder.com/300x200' },
-  { title: 'Image 2', url: 'https://via.placeholder.com/300x200' },
-  { title: 'Image 3', url: 'https://via.placeholder.com/300x200' },
+  { title: 'Image 1', url: 'https://picsum.photos/300/200' },
+  { title: 'Image 2', url: 'https://picsum.photos/300/200' },
+  { title: 'Image 3', url: 'https://picsum.photos/300/200' },
 ];
 
 const CustomDot = ({ isActive, onPress, setIsAutoplay }) => (

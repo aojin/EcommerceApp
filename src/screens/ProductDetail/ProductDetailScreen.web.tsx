@@ -8,7 +8,7 @@ const ProductDetailScreen = () => {
       <Header />
       <main className="flex-1 p-4">
         <img
-          src="https://via.placeholder.com/150"
+          src="https://picsum.photos/150"
           alt="Product"
           className="w-full h-64 object-cover mb-4"
         />
